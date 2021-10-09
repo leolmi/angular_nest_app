@@ -95,6 +95,12 @@ npm i jszip
 
 
 - Gulp per il deploy
+````
+  // gulpfile.js (on root)
+  require('./tools/gulp/deploy');
+````
+il file di deploy:
+[deploy.js](tools/gulp/deploy.js)
 
 
 - Procfile per heroku
@@ -103,3 +109,25 @@ npm i jszip
 ````
 
 - update package.json
+````
+{
+  "name": "APPLICATION-NAME",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "author": "leo.olmi",
+  "url": "https://github.com/leolmi/APPLICATION-NAME",
+  "main": "dist/apps/api/main.js",
+  "scripts": {
+    "ng": "nx",
+    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
+    "start": "node dist/apps/api/main.js",
+    "build": "gulp deploy"
+  },
+  "engines": {
+    "node": "14.17.1"
+  },
+  ...
+}
+````
+
