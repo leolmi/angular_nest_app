@@ -5,41 +5,64 @@ NX.js
 
 
 - creazione app 
+````
 npx create-nx-workspace --preset=angular
+````
 
 - installazione plugin nest
+````
 npm install -D @nrwl/nest
+````
 
 - creazione app nest
+````
 nx generate @nrwl/nest:application {nome-applicazione}
+````
 
 - plugin per la definizione dei path statici
+````
 npm i @nestjs/serve-static
+````
 
 - installazione gulp
+````
 npm i -D gulp
+````
 
 - Mongoose
+````
 npm i mongoose @nestjs/mongoose
+````
 
 - Angular material
+````
 ng add @angular/material
+````
 
 - Flex layout
+````
 npm i @angular/flex-layout
+````
 
 - NGRX
+````
 ng add @ngrx/store@latest
+````
 
 - lodash
+````
 npm i lodash
+````
 
 - File saver
+````
 npm i file-saver
+````
 
 - File zip
+````
 npm i jszip
-
+````
 
 
 
